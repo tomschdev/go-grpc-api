@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/tomschdev/go-grpc-api/sum/proto"
+	pb "github.com/tomschdev/go-grpc-api/unary/sum/proto"
 )
 
 func doSum(c pb.SumServiceClient) {

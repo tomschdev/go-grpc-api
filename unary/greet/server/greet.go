@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/tomschdev/go-grpc-api/greet/proto"
+	pb "github.com/tomschdev/go-grpc-api/unary/greet/proto"
 )
 
 // this precedure is implemented on server side and directly called from client side, with access provided via stub (auto generated code in proto dir)

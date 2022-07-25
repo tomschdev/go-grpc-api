@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/tomschdev/go-grpc-api/greet/proto"
+	pb "github.com/tomschdev/go-grpc-api/unary/greet/proto"
 )
 
 func doGreet(c pb.GreetServiceClient) {

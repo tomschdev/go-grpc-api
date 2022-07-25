@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/tomschdev/go-grpc-api/sum/proto"
+	pb "github.com/tomschdev/go-grpc-api/unary/sum/proto"
 )
 
 func (s *Server) Addition(ctx context.Context, in *pb.SumRequest) (*pb.SumResponse, error) {

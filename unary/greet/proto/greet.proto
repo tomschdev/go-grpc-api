@@ -1,6 +1,6 @@
 syntax = "proto3";
 package greet;
-option go_package = "github.com/tomschdev/go-grpc-api/greet/proto";
+option go_package = "github.com/tomschdev/go-grpc-api/unary/greet/proto";
 
 // messages are the 'datatypes' that our network deals in
 message GreetRequest {
