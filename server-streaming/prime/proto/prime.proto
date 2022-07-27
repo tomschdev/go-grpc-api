@@ -1,0 +1,15 @@
+syntax="proto3";
+package prime;
+option go_package="github.com/tomschdev/go-grpc-api/server-streaming/prime/proto";
+
+message PrimeRequest {
+	uint32 number = 1;
+}
+
+message PrimeResponse {
+	uint32 prime = 1;
+}
+
+service PrimeService {
+	rpc PrimeDecomposition (PrimeRequest) returns (stream PrimeResponse);
+}

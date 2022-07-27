@@ -7,7 +7,7 @@ import (
 	pb "github.com/tomschdev/go-grpc-api/server-streaming/greet/proto"
 )
 
-// this precedure is implemented on server side and directly called from client side, with access provided via stub (auto generated code in proto dir)
+// this procedure is implemented on server side and directly called from client side, with access provided via stub (auto generated code in proto dir)
 func (s *Server) GreetMultiple(in *pb.GreetRequest, stream pb.GreetService_GreetMultipleServer) error {
 	log.Printf("greet function was invoked with: %v\n", in)
 	for i := 0; i < 10; i++ {
