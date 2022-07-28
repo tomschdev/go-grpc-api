@@ -1,0 +1,17 @@
+syntax = "proto3";
+package greet;
+option go_package = "github.com/tomschdev/go-grpc-api/client-streaming/average/proto";
+
+// messages are the 'datatypes' that our network deals in
+message AvgRequest {
+	int32 Number = 1;
+}
+
+message AvgResponse {
+	float Result = 1;
+}
+
+// services define a collection of interfaces for procedure calls that the server must implement and the client may invoke
+service GreetService {
+	rpc AvgNumbers (stream AvgRequest) returns (AvgResponse);
+}
