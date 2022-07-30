@@ -15,3 +15,4 @@
 # vendor/
 
 go-grpc-api-course-content/
+.DS_Store/
