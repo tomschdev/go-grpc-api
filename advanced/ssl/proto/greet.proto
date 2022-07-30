@@ -1,0 +1,17 @@
+syntax = "proto3";
+package greet;
+option go_package = "github.com/tomschdev/go-grpc-api/advanced/ssl/proto";
+
+// messages are the 'datatypes' that our network deals in
+message GreetRequest {
+	string Firstname = 1;
+}
+
+message GreetResponse {
+	string result = 1;
+}
+
+// services define a collection of interfaces for procedure calls that the server must implement and the client may invoke
+service GreetService {
+	rpc Greet (GreetRequest) returns (GreetResponse);
+}
