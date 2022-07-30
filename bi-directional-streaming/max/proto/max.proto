@@ -1,0 +1,17 @@
+syntax = "proto3";
+package greet;
+option go_package = "github.com/tomschdev/go-grpc-api/bi-directional-streaming/max/proto";
+
+// messages are the 'datatypes' that our network deals in
+message MaxRequest {
+	int32 Number = 1;
+}
+
+message MaxResponse {
+	int32 Result = 1;
+}
+
+// services define a collection of interfaces for procedure calls that the server must implement and the client may invoke
+service MaxService {
+	rpc Max (stream MaxRequest) returns (stream MaxResponse);
+}
