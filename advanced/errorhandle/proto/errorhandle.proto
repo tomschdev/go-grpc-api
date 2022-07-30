@@ -1,0 +1,17 @@
+syntax = "proto3";
+package errorhandle;
+option go_package = "github.com/tomschdev/go-grpc-api/advanced/errorhandle/proto";
+
+// messages are the 'datatypes' that our network deals in
+message SqrtRequest {
+	int32 Number = 1; //should be uint32 to prevent error but we want to deal with errors in this instance
+}
+
+message SqrtResponse {
+	double Result = 1;
+}
+
+// services define a collection of interfaces for procedure calls that the server must implement and the client may invoke
+service SqrtService {
+	rpc Sqrt (SqrtRequest) returns (SqrtResponse);
+}
